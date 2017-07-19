@@ -42,14 +42,22 @@
     return self;
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    _reduis = self.bounds.size.width / 2.0f - _lineWidth;
+    self.animationLayer.frame = self.bounds;
+    self.animationLayer.position = CGPointMake(self.bounds.size.width / 2.0f, self.bounds.size.height / 2.0f);
+    
+}
+
 - (void)initAnimation
 {
     _startAngle = -M_PI_2;
     _endAngle = _startAngle;
-    _reduis = self.bounds.size.width / 2.0f - _lineWidth;
     
     self.lineWidth = 1.0f;
-    self.animationLayer.bounds = self.bounds;
     [self setStrokeColor:[UIColor redColor]];
     [self setFillColor:[UIColor clearColor]];
     [self.layer addSublayer:self.animationLayer];
@@ -121,7 +129,7 @@
 - (void)drawWillLoadAnimation
 {
     CGFloat endAngle = _progress * 2 * M_PI - M_PI_2;
-    self.animationLayer.path = [[UIBezierPath bezierPathWithArcCenter:self.center radius:_reduis startAngle:_startAngle endAngle:endAngle clockwise:YES] CGPath];
+    self.animationLayer.path = [[UIBezierPath bezierPathWithArcCenter:self.animationLayer.position radius:_reduis startAngle:_startAngle endAngle:endAngle clockwise:YES] CGPath];
 }
 
 - (void)drawLoadingAnimation
@@ -139,7 +147,7 @@
         _startAngle = -M_PI_2 + 4 * _progress * M_PI * 2;
     }
     
-    self.animationLayer.path = [[UIBezierPath bezierPathWithArcCenter:self.center radius:_reduis startAngle:_startAngle endAngle:_endAngle clockwise:YES] CGPath];
+    self.animationLayer.path = [[UIBezierPath bezierPathWithArcCenter:self.animationLayer.position radius:_reduis startAngle:_startAngle endAngle:_endAngle clockwise:YES] CGPath];
 }
 
 - (void)drawCompletedAnimation
@@ -152,7 +160,7 @@
     
     _startAngle = -M_PI_2;
     _endAngle = -M_PI_2 + _progress * M_PI * 2;
-    self.animationLayer.path = [[UIBezierPath bezierPathWithArcCenter:self.center radius:_reduis startAngle:_startAngle endAngle:_endAngle clockwise:YES] CGPath];
+    self.animationLayer.path = [[UIBezierPath bezierPathWithArcCenter:self.animationLayer.position radius:_reduis startAngle:_startAngle endAngle:_endAngle clockwise:YES] CGPath];
 }
 
 
