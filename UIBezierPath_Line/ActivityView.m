@@ -12,7 +12,6 @@
 {
     CGFloat _startAngle;    //圆形起点弧度
     CGFloat _endAngle;      //圆形终点弧度
-    CGFloat _lineWidth;     //线宽
     CGFloat _reduis;        //半径
 }
 
@@ -47,13 +46,12 @@
 {
     _startAngle = -M_PI_2;
     _endAngle = _startAngle;
-    _lineWidth = 5.0f;
     _reduis = self.bounds.size.width / 2.0f - _lineWidth;
     
+    self.lineWidth = 1.0f;
     self.animationLayer.bounds = self.bounds;
     [self setStrokeColor:[UIColor redColor]];
     [self setFillColor:[UIColor clearColor]];
-    self.animationLayer.lineWidth = _lineWidth;
     [self.layer addSublayer:self.animationLayer];
     [self endLoading];
     [self.link addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
@@ -79,6 +77,12 @@
     }
     
     return _link;
+}
+
+- (void)setLineWidth:(CGFloat)lineWidth
+{
+    _lineWidth = lineWidth;
+    self.animationLayer.lineWidth = lineWidth;
 }
 
 - (void)setStrokeColor:(UIColor *)strokeColor

@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger , ActivityViewStatus)
 
 @property (strong , nonatomic) UIColor *strokeColor;        //线条颜色
 @property (strong , nonatomic) UIColor *fillColor;          //填充颜色
+@property (assign , nonatomic) CGFloat lineWidth;           //线宽
 @property (assign , nonatomic) CGFloat progress;            //进度值
 @property (assign , nonatomic) ActivityViewStatus status;   //状态
 

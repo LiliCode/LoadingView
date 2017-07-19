@@ -21,7 +21,8 @@
 {
     [super viewDidLoad];
     
-    self.loadingView = [[ActivityView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+    self.loadingView = [[ActivityView alloc] initWithFrame:CGRectMake(100, 200, 50, 50)];
+    self.loadingView.lineWidth = 2.0f;
     //00CC99 12 * 16 + 12 =
     self.loadingView.strokeColor = [UIColor colorWithRed:0 green:193.0f/255.0f blue:156.0f/255.0f alpha:1];
     self.loadingView.progress = 0;
