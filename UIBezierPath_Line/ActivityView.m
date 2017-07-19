@@ -13,6 +13,7 @@
     CGFloat _startAngle;    //圆形起点弧度
     CGFloat _endAngle;      //圆形终点弧度
     CGFloat _reduis;        //半径
+    BOOL _willCompleted;    //将要完成
 }
 
 @property (strong , nonatomic) CAShapeLayer *animationLayer;    //展示动画的图层
@@ -155,7 +156,7 @@
     _progress += [self speed];
     if (_progress >= 1)
     {
-        _progress = 0;
+        _progress = 1;
     }
     
     _startAngle = -M_PI_2;

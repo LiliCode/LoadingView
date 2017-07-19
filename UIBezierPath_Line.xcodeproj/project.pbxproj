@@ -153,12 +153,9 @@
 		22C31F891F18AE9F00CE8A2C /* UIBezierPath_Line */ = {
 			isa = PBXGroup;
 			children = (
+				C8C57E3F1F1F91A700C0F569 /* Refresh */,
 				22C31F8D1F18AE9F00CE8A2C /* AppDelegate.h */,
 				22C31F8E1F18AE9F00CE8A2C /* AppDelegate.m */,
-				22C31FC61F1DD74300CE8A2C /* ActivityView.h */,
-				22C31FC71F1DD74300CE8A2C /* ActivityView.m */,
-				22C31FCC1F1F3CAB00CE8A2C /* LinRefreshHeader.h */,
-				22C31FCD1F1F3CAB00CE8A2C /* LinRefreshHeader.m */,
 				22C31F901F18AE9F00CE8A2C /* ViewController.h */,
 				22C31F911F18AE9F00CE8A2C /* ViewController.m */,
 				22C31FBD1F1C52DF00CE8A2C /* RoundViewController.h */,
@@ -198,6 +195,17 @@
 				22C31FB11F18AE9F00CE8A2C /* Info.plist */,
 			);
 			path = UIBezierPath_LineUITests;
+			sourceTree = "<group>";
+		};
+		C8C57E3F1F1F91A700C0F569 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				22C31FC61F1DD74300CE8A2C /* ActivityView.h */,
+				22C31FC71F1DD74300CE8A2C /* ActivityView.m */,
+				22C31FCC1F1F3CAB00CE8A2C /* LinRefreshHeader.h */,
+				22C31FCD1F1F3CAB00CE8A2C /* LinRefreshHeader.m */,
+			);
+			name = Refresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
