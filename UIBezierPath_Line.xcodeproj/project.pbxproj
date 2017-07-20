@@ -20,6 +20,8 @@
 		22C31FC81F1DD74300CE8A2C /* ActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C31FC71F1DD74300CE8A2C /* ActivityView.m */; };
 		22C31FCE1F1F3CAB00CE8A2C /* LinRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C31FCD1F1F3CAB00CE8A2C /* LinRefreshHeader.m */; };
 		22C31FD11F1F3F0000CE8A2C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C31FD01F1F3F0000CE8A2C /* TableViewController.m */; };
+		22C31FD41F20726300CE8A2C /* RespireAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C31FD31F20726300CE8A2C /* RespireAnimationView.m */; };
+		22C31FD71F20897900CE8A2C /* LinRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C31FD61F20897900CE8A2C /* LinRefreshFooter.m */; };
 		358A5B8E629014FCF0AF1ECD /* libPods-UIBezierPath_LineUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62087A3983431BF5F67D405A /* libPods-UIBezierPath_LineUITests.a */; };
 		820664470DC89ACA7BC5DBA3 /* libPods-UIBezierPath_Line.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D403956778F4E1AFBD659582 /* libPods-UIBezierPath_Line.a */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,10 @@
 		22C31FCD1F1F3CAB00CE8A2C /* LinRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinRefreshHeader.m; sourceTree = "<group>"; };
 		22C31FCF1F1F3F0000CE8A2C /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		22C31FD01F1F3F0000CE8A2C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		22C31FD21F20726300CE8A2C /* RespireAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RespireAnimationView.h; sourceTree = "<group>"; };
+		22C31FD31F20726300CE8A2C /* RespireAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespireAnimationView.m; sourceTree = "<group>"; };
+		22C31FD51F20897900CE8A2C /* LinRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinRefreshFooter.h; sourceTree = "<group>"; };
+		22C31FD61F20897900CE8A2C /* LinRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinRefreshFooter.m; sourceTree = "<group>"; };
 		62087A3983431BF5F67D405A /* libPods-UIBezierPath_LineUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIBezierPath_LineUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A1018DAF135580790ED897 /* libPods-UIBezierPath_LineTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIBezierPath_LineTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC7C2D716DB0AB7DB283731 /* Pods-UIBezierPath_LineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIBezierPath_LineUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIBezierPath_LineUITests/Pods-UIBezierPath_LineUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,8 +208,12 @@
 			children = (
 				22C31FC61F1DD74300CE8A2C /* ActivityView.h */,
 				22C31FC71F1DD74300CE8A2C /* ActivityView.m */,
+				22C31FD21F20726300CE8A2C /* RespireAnimationView.h */,
+				22C31FD31F20726300CE8A2C /* RespireAnimationView.m */,
 				22C31FCC1F1F3CAB00CE8A2C /* LinRefreshHeader.h */,
 				22C31FCD1F1F3CAB00CE8A2C /* LinRefreshHeader.m */,
+				22C31FD51F20897900CE8A2C /* LinRefreshFooter.h */,
+				22C31FD61F20897900CE8A2C /* LinRefreshFooter.m */,
 			);
 			name = Refresh;
 			sourceTree = "<group>";
@@ -479,6 +489,8 @@
 				22C31F8F1F18AE9F00CE8A2C /* AppDelegate.m in Sources */,
 				22C31F8C1F18AE9F00CE8A2C /* main.m in Sources */,
 				22C31FBF1F1C52DF00CE8A2C /* RoundViewController.m in Sources */,
+				22C31FD41F20726300CE8A2C /* RespireAnimationView.m in Sources */,
+				22C31FD71F20897900CE8A2C /* LinRefreshFooter.m in Sources */,
 				22C31FD11F1F3F0000CE8A2C /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

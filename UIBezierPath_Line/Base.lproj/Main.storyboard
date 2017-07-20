@@ -107,16 +107,52 @@
                                     <action selector="start:" destination="9J5-Bh-d9H" eventType="touchUpInside" id="Bpz-AK-aiH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egE-FM-2eU">
+                                <rect key="frame" x="20" y="453" width="123" height="30"/>
+                                <state key="normal" title="添加呼吸动画视图"/>
+                                <connections>
+                                    <action selector="respireBegin:" destination="9J5-Bh-d9H" eventType="touchUpInside" id="eUs-d8-iRl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rh-Aq-2eD">
+                                <rect key="frame" x="313" y="453" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="UTq-fA-jfp"/>
+                                    <constraint firstAttribute="height" constant="30" id="X6c-X7-ofi"/>
+                                </constraints>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stopActioin:" destination="9J5-Bh-d9H" eventType="touchUpInside" id="zwA-AP-PLz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0U-uD-zhZ">
+                                <rect key="frame" x="214" y="453" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="60X-zB-40j"/>
+                                    <constraint firstAttribute="width" constant="46" id="QK7-1q-0PK"/>
+                                </constraints>
+                                <state key="normal" title="begin"/>
+                                <connections>
+                                    <action selector="beginAction:" destination="9J5-Bh-d9H" eventType="touchUpInside" id="kLD-Vc-dVf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="PKS-ER-95I" firstAttribute="top" secondItem="9Rh-Aq-2eD" secondAttribute="bottom" constant="184" id="685-Nw-PYB"/>
                             <constraint firstItem="YaE-QA-1fI" firstAttribute="top" secondItem="RsA-rz-vqn" secondAttribute="bottom" constant="38" id="6rp-SI-yil"/>
                             <constraint firstItem="RsA-rz-vqn" firstAttribute="top" secondItem="ymg-Oo-Rfy" secondAttribute="bottom" constant="30" id="INP-kb-kxs"/>
+                            <constraint firstItem="PKS-ER-95I" firstAttribute="top" secondItem="egE-FM-2eU" secondAttribute="bottom" constant="184" id="b34-wp-dMV"/>
+                            <constraint firstAttribute="trailing" secondItem="9Rh-Aq-2eD" secondAttribute="trailing" constant="16" id="eFI-Rh-SMj"/>
                             <constraint firstItem="RsA-rz-vqn" firstAttribute="leading" secondItem="wcJ-CH-7j9" secondAttribute="leading" constant="30" id="eLJ-Hv-uNp"/>
                             <constraint firstItem="UET-Mf-yQz" firstAttribute="top" secondItem="RsA-rz-vqn" secondAttribute="bottom" constant="43" id="eoF-c6-K9z"/>
+                            <constraint firstItem="egE-FM-2eU" firstAttribute="leading" secondItem="wcJ-CH-7j9" secondAttribute="leading" constant="20" id="f1Q-xI-Wex"/>
                             <constraint firstItem="YaE-QA-1fI" firstAttribute="leading" secondItem="wcJ-CH-7j9" secondAttribute="leading" constant="30" id="j1y-hS-kjb"/>
                             <constraint firstItem="UET-Mf-yQz" firstAttribute="centerX" secondItem="wcJ-CH-7j9" secondAttribute="centerX" id="jNa-7K-2pV"/>
+                            <constraint firstItem="9Rh-Aq-2eD" firstAttribute="leading" secondItem="l0U-uD-zhZ" secondAttribute="trailing" constant="53" id="mV4-c3-xhU"/>
                             <constraint firstAttribute="trailing" secondItem="Lzi-GD-K8l" secondAttribute="trailing" constant="30" id="nay-tH-0A8"/>
+                            <constraint firstItem="PKS-ER-95I" firstAttribute="top" secondItem="l0U-uD-zhZ" secondAttribute="bottom" constant="184" id="neZ-bI-vPC"/>
+                            <constraint firstItem="l0U-uD-zhZ" firstAttribute="leading" secondItem="egE-FM-2eU" secondAttribute="trailing" constant="71" id="nrs-g7-PzJ"/>
                             <constraint firstItem="Lzi-GD-K8l" firstAttribute="top" secondItem="RsA-rz-vqn" secondAttribute="bottom" constant="38" id="r4j-5K-Vjj"/>
                             <constraint firstAttribute="trailing" secondItem="RsA-rz-vqn" secondAttribute="trailing" constant="30" id="y58-u8-Ijh"/>
                         </constraints>

@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "LinRefreshHeader.h"
+#import "LinRefreshFooter.h"
 
 @interface TableViewController ()
 
@@ -25,6 +26,13 @@
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self.tableView.mj_header endRefreshing];
             MJRefreshLog(@"刷新完成");
+        });
+    }];
+    
+    self.tableView.mj_footer = [LinRefreshFooter footerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.tableView.mj_footer endRefreshing];
+            MJRefreshLog(@"加载完成");
         });
     }];
 }
