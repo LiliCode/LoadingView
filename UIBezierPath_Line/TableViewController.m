@@ -10,6 +10,9 @@
 #import "LinRefreshHeader.h"
 #import "LinRefreshFooter.h"
 
+#import "MBProgressHUD+Loading.h"
+
+
 @interface TableViewController ()
 
 @end
@@ -35,7 +38,27 @@
             MJRefreshLog(@"加载完成");
         });
     }];
+    
+    
+    [MBProgressHUD showLoadingAddedTo:self.tableView];
+    
 }
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
+}
+
+- (IBAction)toast:(UIBarButtonItem *)sender
+{
+    [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
+    [MBProgressHUD showText:@"测试Toast是否可以使用" toView:[UIApplication sharedApplication].keyWindow afterDelay:2];
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -22,6 +22,7 @@
 		22C31FD11F1F3F0000CE8A2C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C31FD01F1F3F0000CE8A2C /* TableViewController.m */; };
 		22C31FD41F20726300CE8A2C /* RespireAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C31FD31F20726300CE8A2C /* RespireAnimationView.m */; };
 		22C31FD71F20897900CE8A2C /* LinRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C31FD61F20897900CE8A2C /* LinRefreshFooter.m */; };
+		22EF72C91F289F98000F00BE /* MBProgressHUD+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF72C81F289F98000F00BE /* MBProgressHUD+Loading.m */; };
 		358A5B8E629014FCF0AF1ECD /* libPods-UIBezierPath_LineUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62087A3983431BF5F67D405A /* libPods-UIBezierPath_LineUITests.a */; };
 		820664470DC89ACA7BC5DBA3 /* libPods-UIBezierPath_Line.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D403956778F4E1AFBD659582 /* libPods-UIBezierPath_Line.a */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,8 @@
 		22C31FD31F20726300CE8A2C /* RespireAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RespireAnimationView.m; sourceTree = "<group>"; };
 		22C31FD51F20897900CE8A2C /* LinRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinRefreshFooter.h; sourceTree = "<group>"; };
 		22C31FD61F20897900CE8A2C /* LinRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinRefreshFooter.m; sourceTree = "<group>"; };
+		22EF72C71F289F98000F00BE /* MBProgressHUD+Loading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Loading.h"; sourceTree = "<group>"; };
+		22EF72C81F289F98000F00BE /* MBProgressHUD+Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Loading.m"; sourceTree = "<group>"; };
 		62087A3983431BF5F67D405A /* libPods-UIBezierPath_LineUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIBezierPath_LineUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A1018DAF135580790ED897 /* libPods-UIBezierPath_LineTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIBezierPath_LineTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC7C2D716DB0AB7DB283731 /* Pods-UIBezierPath_LineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIBezierPath_LineUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIBezierPath_LineUITests/Pods-UIBezierPath_LineUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,9 +206,19 @@
 			path = UIBezierPath_LineUITests;
 			sourceTree = "<group>";
 		};
+		22EF72C61F2888B7000F00BE /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				22EF72C71F289F98000F00BE /* MBProgressHUD+Loading.h */,
+				22EF72C81F289F98000F00BE /* MBProgressHUD+Loading.m */,
+			);
+			name = Loading;
+			sourceTree = "<group>";
+		};
 		C8C57E3F1F1F91A700C0F569 /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
+				22EF72C61F2888B7000F00BE /* Loading */,
 				22C31FC61F1DD74300CE8A2C /* ActivityView.h */,
 				22C31FC71F1DD74300CE8A2C /* ActivityView.m */,
 				22C31FD21F20726300CE8A2C /* RespireAnimationView.h */,
@@ -225,12 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22C31FB41F18AE9F00CE8A2C /* Build configuration list for PBXNativeTarget "UIBezierPath_Line" */;
 			buildPhases = (
-				D77A2A035D436361544962E2 /* 📦 Check Pods Manifest.lock */,
+				D77A2A035D436361544962E2 /* [CP] Check Pods Manifest.lock */,
 				22C31F831F18AE9F00CE8A2C /* Sources */,
 				22C31F841F18AE9F00CE8A2C /* Frameworks */,
 				22C31F851F18AE9F00CE8A2C /* Resources */,
-				C806E9E12A5F5BA3B25AD854 /* 📦 Embed Pods Frameworks */,
-				111438587D2ADC70CDDD6CE2 /* 📦 Copy Pods Resources */,
+				C806E9E12A5F5BA3B25AD854 /* [CP] Embed Pods Frameworks */,
+				111438587D2ADC70CDDD6CE2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,12 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22C31FB71F18AE9F00CE8A2C /* Build configuration list for PBXNativeTarget "UIBezierPath_LineTests" */;
 			buildPhases = (
-				751430761684D18D20B1FDEC /* 📦 Check Pods Manifest.lock */,
+				751430761684D18D20B1FDEC /* [CP] Check Pods Manifest.lock */,
 				22C31F9C1F18AE9F00CE8A2C /* Sources */,
 				22C31F9D1F18AE9F00CE8A2C /* Frameworks */,
 				22C31F9E1F18AE9F00CE8A2C /* Resources */,
-				A0ED513D012F732055BE1322 /* 📦 Embed Pods Frameworks */,
-				1829A669B7F5AB28D905F702 /* 📦 Copy Pods Resources */,
+				A0ED513D012F732055BE1322 /* [CP] Embed Pods Frameworks */,
+				1829A669B7F5AB28D905F702 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,11 +279,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22C31FBA1F18AE9F00CE8A2C /* Build configuration list for PBXNativeTarget "UIBezierPath_LineUITests" */;
 			buildPhases = (
-				C9BF30D01516B3BE5CE224D5 /* 📦 Check Pods Manifest.lock */,
+				C9BF30D01516B3BE5CE224D5 /* [CP] Check Pods Manifest.lock */,
 				22C31FA71F18AE9F00CE8A2C /* Sources */,
 				22C31FA81F18AE9F00CE8A2C /* Frameworks */,
 				22C31FA91F18AE9F00CE8A2C /* Resources */,
-				D2C24CB8BC497100DEC511D8 /* 📦 Copy Pods Resources */,
+				D2C24CB8BC497100DEC511D8 /* [CP] Copy Pods Resources */,
+				05BDAD9EC68F1CFB09C5DF6E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,14 +370,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		111438587D2ADC70CDDD6CE2 /* 📦 Copy Pods Resources */ = {
+		05BDAD9EC68F1CFB09C5DF6E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIBezierPath_LineUITests/Pods-UIBezierPath_LineUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		111438587D2ADC70CDDD6CE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,14 +400,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIBezierPath_Line/Pods-UIBezierPath_Line-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1829A669B7F5AB28D905F702 /* 📦 Copy Pods Resources */ = {
+		1829A669B7F5AB28D905F702 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,29 +415,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIBezierPath_LineTests/Pods-UIBezierPath_LineTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		751430761684D18D20B1FDEC /* 📦 Check Pods Manifest.lock */ = {
+		751430761684D18D20B1FDEC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A0ED513D012F732055BE1322 /* 📦 Embed Pods Frameworks */ = {
+		A0ED513D012F732055BE1322 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,14 +445,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIBezierPath_LineTests/Pods-UIBezierPath_LineTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C806E9E12A5F5BA3B25AD854 /* 📦 Embed Pods Frameworks */ = {
+		C806E9E12A5F5BA3B25AD854 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,29 +460,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIBezierPath_Line/Pods-UIBezierPath_Line-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C9BF30D01516B3BE5CE224D5 /* 📦 Check Pods Manifest.lock */ = {
+		C9BF30D01516B3BE5CE224D5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D2C24CB8BC497100DEC511D8 /* 📦 Copy Pods Resources */ = {
+		D2C24CB8BC497100DEC511D8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,19 +490,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UIBezierPath_LineUITests/Pods-UIBezierPath_LineUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D77A2A035D436361544962E2 /* 📦 Check Pods Manifest.lock */ = {
+		D77A2A035D436361544962E2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -485,6 +514,7 @@
 			files = (
 				22C31FC81F1DD74300CE8A2C /* ActivityView.m in Sources */,
 				22C31F921F18AE9F00CE8A2C /* ViewController.m in Sources */,
+				22EF72C91F289F98000F00BE /* MBProgressHUD+Loading.m in Sources */,
 				22C31FCE1F1F3CAB00CE8A2C /* LinRefreshHeader.m in Sources */,
 				22C31F8F1F18AE9F00CE8A2C /* AppDelegate.m in Sources */,
 				22C31F8C1F18AE9F00CE8A2C /* main.m in Sources */,

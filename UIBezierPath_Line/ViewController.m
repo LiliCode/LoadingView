@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import "ActivityView.h"
+#import <MJRefresh.h>
 
 static const NSTimeInterval __time_second = 2;    //单位 秒(s)
 static const CGFloat transitionPoint = .5f;
@@ -38,24 +39,7 @@ FOUNDATION_STATIC_INLINE CGFloat ScreenHeight()
 {
     [super viewDidLoad];
     
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(0, ScreenHeight()/2.0f)];
-    [path addLineToPoint:CGPointMake(ScreenWidth(), ScreenHeight()/2.0f)];
     
-    self.lineLayer = [CAShapeLayer layer];
-    self.lineLayer.bounds = self.view.layer.bounds;
-    self.lineLayer.lineWidth = 5.0f;
-    self.lineLayer.strokeColor = [[UIColor redColor] CGColor];
-    self.lineLayer.fillColor = [[UIColor blackColor] CGColor];
-    
-    self.lineLayer.path = [path CGPath];
-    
-    self.lineLayer.strokeStart = 0;
-    self.lineLayer.strokeEnd = 1;
-    
-    [self.view.layer addSublayer:self.lineLayer];
-    
-    [self animationOne];
 }
 
 

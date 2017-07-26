@@ -161,6 +161,8 @@
     _startAngle = -M_PI_2;
     _endAngle = -M_PI_2 + _progress * M_PI * 2;
     self.animationLayer.path = [[UIBezierPath bezierPathWithArcCenter:self.animationLayer.position radius:_reduis startAngle:_startAngle endAngle:_endAngle clockwise:YES] CGPath];
+    
+    NSLog(@"完成刷新");
 }
 
 
@@ -189,6 +191,10 @@
     [self.link invalidate];
 }
 
+- (CGSize)intrinsicContentSize
+{
+    return self.bounds.size;
+}
 
 
 - (void)dealloc

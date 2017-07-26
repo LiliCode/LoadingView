@@ -50,6 +50,7 @@
     {
         case MJRefreshStateIdle:
             //普通闲置状态
+            self.loadingView.status = ActivityViewStatusWillLoad;
             break;
         case MJRefreshStatePulling:
             //松开就可以进行刷新的状态

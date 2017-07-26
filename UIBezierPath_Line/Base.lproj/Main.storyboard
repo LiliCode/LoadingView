@@ -172,7 +172,7 @@
             </objects>
             <point key="canvasLocation" x="1802" y="-279"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Title-->
         <scene sceneID="sQW-rM-JCI">
             <objects>
                 <tableViewController id="g6o-Ks-7RU" customClass="TableViewController" sceneMemberID="viewController">
@@ -204,6 +204,13 @@
                             <outlet property="delegate" destination="g6o-Ks-7RU" id="4n4-wd-NwR"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="p9B-aL-y7d">
+                        <barButtonItem key="rightBarButtonItem" title="测试Toast" id="Bcr-Ek-2NC">
+                            <connections>
+                                <action selector="toast:" destination="g6o-Ks-7RU" id="Bfu-Dm-Jvv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lz-XJ-7y4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
