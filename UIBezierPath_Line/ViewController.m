@@ -10,6 +10,8 @@
 #import "ActivityView.h"
 #import <MJRefresh.h>
 
+#import "UIViewController+Loading.h"
+
 static const NSTimeInterval __time_second = 2;    //单位 秒(s)
 static const CGFloat transitionPoint = .5f;
 

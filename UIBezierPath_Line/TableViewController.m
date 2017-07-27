@@ -11,6 +11,7 @@
 #import "LinRefreshFooter.h"
 
 #import "MBProgressHUD+Loading.h"
+#import "UIViewController+Loading.h"
 
 
 @interface TableViewController ()
@@ -40,7 +41,12 @@
     }];
     
     
-    [MBProgressHUD showLoadingAddedTo:self.tableView];
+//    [MBProgressHUD showLoadingAddedTo:self.tableView];
+    
+    self.loading_textColor = [UIColor grayColor];
+    [self showStatusText:@"获取订单信息失败，请点击屏幕刷新..." loadingStyle:LoadingIndicatorStyleAnnulus click:^(UILabel *label, LoadDataStatus status) {
+        
+    }];
     
 }
 
@@ -54,7 +60,7 @@
 - (IBAction)toast:(UIBarButtonItem *)sender
 {
     [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
-    [MBProgressHUD showText:@"测试Toast是否可以使用" toView:[UIApplication sharedApplication].keyWindow afterDelay:2];
+    [MBProgressHUD showText:@"测试Toast是否可以使用" afterDelay:2];
 }
 
 
@@ -70,7 +76,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

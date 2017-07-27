@@ -10,8 +10,13 @@
 #import "ActivityView.h"
 
 
-
 @implementation MBProgressHUD (Loading)
+
+
++ (instancetype)showText:(NSString *)text afterDelay:(NSTimeInterval)delay
+{
+    return [self showText:text toView:[UIApplication sharedApplication].keyWindow afterDelay:delay];
+}
 
 + (instancetype)showText:(NSString *)text toView:(UIView *)view afterDelay:(NSTimeInterval)delay
 {

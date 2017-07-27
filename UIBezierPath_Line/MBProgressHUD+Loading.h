@@ -10,11 +10,21 @@
 
 @interface MBProgressHUD (Loading)
 
+
+/**
+ 在keyWindow上面展示文本信息
+
+ @param text 需要显示的文本信息
+ @param delay 延时几秒消失
+ @return 返回HUD
+ */
++ (instancetype)showText:(NSString *)text afterDelay:(NSTimeInterval)delay;
+
 /**
  显示文本信息
 
- @param text 文本信息
- @param view 添加到那个view
+ @param text 需要显示的文本信息
+ @param view 添加到需要显示的视图上面
  @param delay 延时几秒消失
  @return 返回HUD
  */
