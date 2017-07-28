@@ -47,7 +47,7 @@
 {
     [super layoutSubviews];
     
-    _reduis = self.bounds.size.width / 2.0f - _lineWidth;
+    _reduis = self.bounds.size.height / 2.0f - _lineWidth;
     self.animationLayer.frame = self.bounds;
     self.animationLayer.position = CGPointMake(self.bounds.size.width / 2.0f, self.bounds.size.height / 2.0f);
 }

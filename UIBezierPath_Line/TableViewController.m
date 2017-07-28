@@ -11,10 +11,11 @@
 #import "LinRefreshFooter.h"
 
 #import "MBProgressHUD+Loading.h"
-#import "UIViewController+Loading.h"
+#import "EmptyDataController.h"
 
 
 @interface TableViewController ()
+@property (strong , nonatomic) EmptyDataController *emptyDataController;
 
 @end
 
@@ -26,28 +27,42 @@
     
     self.title = @"自定义刷新";
     
-    self.tableView.mj_header = [LinRefreshHeader headerWithRefreshingBlock:^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.tableView.mj_header endRefreshing];
-            MJRefreshLog(@"刷新完成");
-        });
-    }];
-    
-    self.tableView.mj_footer = [LinRefreshFooter footerWithRefreshingBlock:^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self.tableView.mj_footer endRefreshing];
-            MJRefreshLog(@"加载完成");
-        });
-    }];
+//    self.tableView.mj_header = [LinRefreshHeader headerWithRefreshingBlock:^{
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self.tableView.mj_header endRefreshing];
+//            MJRefreshLog(@"刷新完成");
+//        });
+//    }];
+//    
+//    self.tableView.mj_footer = [LinRefreshFooter footerWithRefreshingBlock:^{
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self.tableView.mj_footer endRefreshing];
+//            MJRefreshLog(@"加载完成");
+//        });
+//    }];
     
     
 //    [MBProgressHUD showLoadingAddedTo:self.tableView];
     
-    self.loading_textColor = [UIColor grayColor];
-    [self showStatusText:@"获取订单信息失败，请点击屏幕刷新..." loadingStyle:LoadingIndicatorStyleAnnulus click:^(UILabel *label, LoadDataStatus status) {
-        
-    }];
     
+    self.tableView.tableFooterView = [UIView new];
+    
+    self.emptyDataController = [EmptyDataController emptyData:self.tableView];
+    self.emptyDataController.emptyDataImage = [UIImage imageNamed:@"没有附近的人"];
+    
+    NSMutableDictionary *buttonTitleAttribute = [[NSMutableDictionary alloc] init];
+    [buttonTitleAttribute setObject:[UIFont systemFontOfSize:20] forKey:NSFontAttributeName];
+    [buttonTitleAttribute setObject:[UIColor orangeColor] forKey:NSForegroundColorAttributeName];
+    NSAttributedString *buttonTitle = [[NSAttributedString alloc] initWithString:@"网络不给力，请点击重试哦~" attributes:buttonTitleAttribute];
+    self.emptyDataController.buttonTitle = buttonTitle;
+    self.emptyDataController.networkErrorImage = [UIImage imageNamed:@"网络不给力"];
+    self.emptyDataController.loadStatus = LoadDataStatusLoading;
+    self.emptyDataController.indicatorStyle = ActivityIndicatorStyleAnnulus;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.emptyDataController.loadStatus = LoadDataStatusFailed;
+        [self.emptyDataController reloadEmptyData];
+    });
 }
 
 - (void)viewWillDisappear:(BOOL)animated

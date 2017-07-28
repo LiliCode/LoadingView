@@ -8,6 +8,8 @@ target 'UIBezierPath_Line' do
 
   pod 'MJRefresh'
   pod 'MBProgressHUD'
+  pod 'DZNEmptyDataSet'
+
 
   target 'UIBezierPath_LineTests' do
     inherit! :search_paths
