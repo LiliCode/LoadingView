@@ -113,7 +113,7 @@
 
 - (void)emptyDataSetWillAppear:(UIScrollView *)scrollView
 {
-    self.scrollView.contentOffset = CGPointZero;
+    scrollView.contentOffset = CGPointZero;
 }
 
 
